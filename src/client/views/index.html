@@ -29,6 +29,51 @@
                 </div>
                 <input type="submit" name="ready-to-go" value="Search" onclick="return Client.handleSearch(event)" onsubmit="return Client.handleSearch(event)">
             </form>
+
+            <section id="travel_modal" class="modal">
+                <div class="modal-content">
+                    <div>
+                        <span class="close">&times;</span>
+                    </div>
+
+                    <div class="modal_info">
+                        <img id="modal_img" src="../media/bridgebackground.jpg">
+
+                        <p>
+                            <h2>Travel to <span class="location">Rome,</span>
+                                <span class="country">
+                                    Italy
+                                </span>
+                            </h2>
+                            <strong>Departure: </strong>
+                            <span id="date">
+                                06/11/2020
+                            </span>
+                        </p>
+
+                        <p>
+                            Travel to: <span class="location">Rome, </span>
+                            <span class="country">
+                                Italy
+                            </span>
+                            <span id="days_to_travel">
+                                in 22 days from now.
+                            </span>
+                        </p>
+
+                        <p>
+                            <strong>Weather:</strong>
+                            <span id="max_temp">Max: 28º</span>
+                            <span id="min_temp">, Low: 12º</span>
+                            <span id="weather"></span>
+                        </p>
+                        
+                        <input id="modal_button" type="button" value="Export to PDF">
+                            <i class="far fa-file-pdf"></i>
+                        <input id="modal_button" type="button" value="Print Journey">
+                    </div>
+                </div>
+            </section>
         </div>
 
         <footer>
