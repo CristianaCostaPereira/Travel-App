@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Italianno&family=Lovers+Quarrel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /*full screen */
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: rgb(27 136 136);
+    background-image: url("../media/bridgebackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
