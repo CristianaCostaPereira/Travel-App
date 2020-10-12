@@ -1,0 +1,42 @@
+{
+  "name": "travel-app",
+  "version": "1.0.0",
+  "description": "travel app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server/index.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CristianaCostaPereira/Travel-App.git"
+  },
+  "author": "Cristiana Costa Pereira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CristianaCostaPereira/Travel-App/issues"
+  },
+  "homepage": "https://github.com/CristianaCostaPereira/Travel-App#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.3.0",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.0.0",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "sass-loader": "^10.0.3",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^4.2.3"
+  }
+}
