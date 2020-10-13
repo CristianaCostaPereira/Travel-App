@@ -10,7 +10,13 @@ body {
     align-items: center;
     font-family: sans-serif;
     color: rgb(27,136,136);
-    background-image: url("../media/bridgebackground.jpg");
+    background-image: url("../media/boatbackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+#error-message {
+    color: red;
+    font-size: 12px;
+    font-weight: 700;
 }
