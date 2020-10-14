@@ -16,11 +16,11 @@
             <form class="" onsubmit="return Client.handleSearch(event)">
                 <label for="destination">Destination</label>
                 <i class="fas fa-globe-africa fa-1x"></i>
-                <input type="search" class="city-input" id="city" name="input" value="" onblur="return Client.handleSubmit(event)" placeholder="Enter destination here 😊" required>
+                <input type="search" class="city-input" id="city" name="input" value="" onblur="return Client.handleSearch(event)" placeholder="Enter destination here 😊" required>
                 <div id="error-message"></div>
                     
                 <div class="dates">
-                    <div id="departure-date">                    
+                    <div id="departure-date">
                         <label for="departure-date">Departure:</label>
                         <i class="fas fa-plane-departure"></i>
                         <input type="date" class="date-input" id="departure-date" name="go-date" placeholder="DD-MM-YYYY" required>
@@ -52,7 +52,7 @@
                         </p>
 
                         <p>
-                            Travel to: <span class="location">Rome, </span>
+                            <strong>Travel to:</strong><span class="location">Rome, </span>
                             <span class="country">
                                 Italy
                             </span>
