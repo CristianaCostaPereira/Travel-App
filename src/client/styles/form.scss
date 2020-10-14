@@ -3,35 +3,33 @@ form {
     border-radius: 10px;
     padding: 40px;
     background: #ffffff61;
+    width: 300px;
 }
 
-label {
-    font-weight: 700;
-}
-
-label[for="destination"] {
+.title {
     font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+input {
+    margin-bottom: 20px;
+    border-radius: 6px;
 }
 
 input[type="search"] {
     padding: 5px 20px;
     width: 100%;
     line-height: 16px;
-    margin: 10px 0;
 }
 
 input[type="date"] {
     padding: 5px 20px;
     width: 87%;
     line-height: 16px;
-    margin: 10px 0;
 }
 
-label[for="departure-date"] {
-    font-size: 20px;
-}
-
-button {
+input[type="submit"] {
     font-size: 14px;
     font-family: 'Source Serif Pro', serif;
     color: #e2dede;
@@ -40,15 +38,14 @@ button {
     border: 2px solid #17807be0;
     background-color: #198686e0;
     padding: 8px;
-    margin-top: 7px;
-    margin-bottom: 11px;
     border-radius: 6px;
     cursor: pointer;
     transition-duration: 0.4s;
     box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2), 0 6px 80px 0 rgba(0,0,0,0.19);
+    margin-top: 20px;
 }
 
-button:hover {
+input[type="submit"]:hover {
     background-color: #299c7f96;
     color: #fffee4;
     box-shadow: 0 8px 6px 0 rgba(0,0,0,0.2), 0 12px 80px 0 rgba(0,0,0,0.19)
