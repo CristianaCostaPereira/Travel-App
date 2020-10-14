@@ -3,7 +3,7 @@ form {
     border-radius: 10px;
     padding: 40px;
     background: #ffffff61;
-    width: 300px;
+    width: 400px;
 }
 
 .title {
@@ -18,14 +18,14 @@ input {
 }
 
 input[type="search"] {
-    padding: 5px 20px;
+    padding: 7px 20px; // to compensate the extra 4px in the calender icon in the date input
     width: 100%;
     line-height: 16px;
 }
 
 input[type="date"] {
     padding: 5px 20px;
-    width: 87%;
+    width: 89%;
     line-height: 16px;
 }
 
