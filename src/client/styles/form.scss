@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap');
+
 form {
     border: 2px solid #545454;
     border-radius: 10px;
@@ -8,6 +10,7 @@ form {
 
 .title {
     font-size: 20px;
+    font-family: 'Sansita Swashed', cursive;
     font-weight: 700;
     margin-bottom: 7px;
 }
