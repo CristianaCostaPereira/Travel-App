@@ -20,3 +20,27 @@ body {
     font-size: 12px;
     font-weight: 700;
 }
+
+main {
+    flex: 2;
+}
+
+section {
+    max-width: 800px;
+    margin: 25px auto;
+}
+
+@media screen and (max-width: 800px) {
+    .heading {
+        display: flex;
+        justify-content: center;
+    }
+
+    body {
+        padding: 20px;
+    }
+
+    input[type="date"] {
+        width: 81%;
+    }
+}
