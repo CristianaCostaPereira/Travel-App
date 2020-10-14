@@ -10,7 +10,7 @@ body {
     align-items: center;
     font-family: sans-serif;
     color: rgb(27,136,136);
-    background-image: url("../media/bridgebackground.jpg");
+    background-image: url("../media/mountainbackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -40,7 +40,8 @@ section {
         padding: 20px;
     }
 
-    input[type="date"] {
-        width: 81%;
-    }
+    // input[type="date"] {
+    //     width: 81%;
+    //     color:red;
+    // }
 }
