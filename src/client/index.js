@@ -2,7 +2,7 @@ import { handleSearch } from "./js/formSearch";
 import { validateCity } from "./js/validateCity";
 import { validateDate } from "./js/validateDate";
 
-alert("I exist");
+// alert("Welcome to your Travel Journey Application");
 
 import './styles/body.scss';
 import './styles/header.scss';

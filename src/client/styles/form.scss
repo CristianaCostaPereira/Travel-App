@@ -9,6 +9,10 @@ label {
     font-weight: 700;
 }
 
+label[for="destination"] {
+    font-size: 20px;
+}
+
 input[type="search"] {
     padding: 5px 20px;
     width: 100%;
@@ -21,12 +25,10 @@ input[type="date"] {
     width: 87%;
     line-height: 16px;
     margin: 10px 0;
-    color: red;
 }
 
 label[for="departure-date"] {
-    font-size: 18px;
-    margin-top: 17px;
+    font-size: 20px;
 }
 
 button {
