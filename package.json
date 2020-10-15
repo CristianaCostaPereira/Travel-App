@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server/index.js",
-    "build": "webpack"
+    "build": "webpack",
+    "dev":"webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "sass-loader": "^10.0.3",
     "style-loader": "^2.0.0",
-    "terser-webpack-plugin": "^4.2.3"
+    "terser-webpack-plugin": "^4.2.3",
+    "webpack-dev-server": "^3.11.0"
   }
 }
