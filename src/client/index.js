@@ -1,6 +1,5 @@
 import { handleSearch } from "./js/formSearch";
-import { validateCity } from "./js/validateCity";
-import { validateDate } from "./js/validateDate";
+// import { validateCity } from "./js/validateCity";
 
 // alert("Welcome to your Travel Journey Application");
 
@@ -11,6 +10,5 @@ import './styles/footer.scss';
 
 export {
     handleSearch,
-    validateCity,
-    validateDate
+    // validateCity,
 };

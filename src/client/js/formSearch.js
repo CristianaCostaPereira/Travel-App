@@ -1,5 +1,4 @@
 import { validateCity } from "./validateCity";
-import { validateDate } from "./validateDate";
 
 // The form function
 export async function handleSearch(event) {
@@ -16,31 +15,32 @@ export async function handleSearch(event) {
         document.getElementById("error-message").innerHTML = "";
         
     }
-    
 
-    let formDate = document.getElementById("departure-date").value
-
-    if (!validateDate(formDate,)) {
-        document.getElementById("error-message").innerHTML = "Please, enter a valid date";
-        return;
-        
-    } else {
-        document.getElementById("error-message").innerHTML = "";
-        
-    }
-
-
-    // cHANGE PATH!!!!!!
-    var result = await fetch('http://localhost:8081/evaluate-articles', {
+    var result = await fetch('http://localhost:3000/travel-app', {
         method: "POST",
         credentials: "same-origin",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({formUrl}),
+        body: JSON.stringify({formCity}),
     })
 
     var jsonResult = await result.json()
 
     updateUI(jsonResult)
+}
+
+// Dynamic UI
+const updateUI = async () => {
+    const request = await fetch("/all");
+
+    try {
+        const allData = await request.json();
+
+        document.getElementById("city").innerHTML = `${allData.city}`;
+
+
+    } catch(error) {
+        console.log("error", error);
+    }
 }

@@ -1,3 +1,11 @@
+const dotenv = require('dotenv').config({
+    path: '../../.env'
+});
+
+const geoUser = process.env.GEO_USERNAME;
+
+console.log(geoUser);
+
 var path = require("path");
 
 // Express package to run the server and its routes
@@ -26,13 +34,27 @@ app.get('/', function (req, res) {
 })
 
 // Server creation
-const port = 8000;
-
-const server = app.listen (port, () => {
-    console.log(`Server is running on localhost:${port}`)
-});
+const port = 3000;
 
 // The port the app will listen to for incoming requests
-app.listen(8000, function () {
-    console.log('Example app listening on port 8000!')
-})
+const server = app.listen (port, () => {
+    console.log(`Server is running on localhost:${port}`);
+});
+
+
+// Function to GET Geonames Web API Data (Async GET)
+async function geoNames(req, res) {
+    const username = process.env.GEO_USERNAME
+
+    let url = `http://api.geonames.org/searchJSON?q=${req.body.destination}&maxRows=1&username=${username}`;
+
+    const response = await fetch(url)
+
+    try {
+        const data = await response.json();
+        return(data);
+
+    } catch (error) {
+        console.log({ "error": error });
+    }
+};
