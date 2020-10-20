@@ -20,6 +20,7 @@ app.use(bodyParser.json());
 
 // Cors origin allowance
 const cors = require("cors");
+const { response } = require('express');
 app.use(cors());
 
 // Direct app to connect the server-side code to the main project folder AKA the client-side code
@@ -41,6 +42,22 @@ const server = app.listen (port, () => {
 
 // get route for travel info
 app.get('/travel-info', function (req, res) {
-    // res.sendFile('dist/index.html')
-    res.send("hello from server siiiide");
+
+    let city = "";
+    let date = "";
+    let dateDiff = "";
+    
+    let response = {
+        "success":true,
+        "trip": {
+            "departDate":1593475200000,
+            "city":"London",
+            "country":"United Kingdom",
+            "cityId":2643743,
+            "days":-112,
+            "weather":"No forecast for this city",
+            "imageUrl":"https://pixabay.com/get/53e3d5434f57b10ff3d8992cc62e3f77173fd8ed4e507749762d7add914fc4_640.jpg"
+        }
+    }
+    res.send(response);
 })

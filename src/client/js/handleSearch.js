@@ -1,21 +1,22 @@
-// const { default: Axios } = require("axios");
+const axios = require('axios');
 
-function getTravelInfo() {
+async function getTravelInfo() {
 
+    // Users input on city <input id="city">
     var city = document.getElementById("city").value;
+
+    // Users input on city <input id="departure-date">
     var departureDate = document.getElementById("departure-date").value;
 
-    //send request to server
-
-    // axios({
-    //         method: 'get',
-    //         url: `http://localhost/travel-info`
-    //     })
-    //     .then(res => console.log(res))
-    //     .catch(err => console.log(err))
-    
-
-    
+    // Axios get: first parameter its the URL path and the second is the configuration
+    let response = await axios.get('/travel-info', 
+        {
+            params: {
+                city: city,
+                departureDate: departureDate
+            }
+        }
+    );
 
 }
 
