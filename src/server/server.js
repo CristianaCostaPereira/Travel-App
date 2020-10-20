@@ -39,19 +39,8 @@ const server = app.listen (port, () => {
 });
 
 
-// Function to GET Geonames Web API Data (Async GET)
-async function geoNames(req, res) {
-    const username = process.env.GEO_USERNAME
-
-    let url = `http://api.geonames.org/searchJSON?q=${req.body.destination}&maxRows=1&username=${username}`;
-
-    const response = await fetch(url)
-
-    try {
-        const data = await response.json();
-        return(data);
-
-    } catch (error) {
-        console.log({ "error": error });
-    }
-};
+// get route for travel info
+app.get('/travel-info', function (req, res) {
+    // res.sendFile('dist/index.html')
+    res.send("hello from server siiiide");
+})
