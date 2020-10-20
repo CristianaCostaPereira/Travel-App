@@ -14,21 +14,21 @@
         <h1 class="heading">Travel Journey</h1>
         
         <div id="app">
-            <form class="" onsubmit="return Client.handleSearch(event)">
+            <form class="" onsubmit="">
                 <div>
                     <div class="title">
                         <label for="destination">Destination:</label>
                         <i class="fas fa-globe-africa fa-1x"></i>
                     </div>
 
-                    <input type="search" id="city" name="input" value="" onblur="return Client.handleSearch(event)" placeholder="Enter destination here 😊" required>
+                    <input type="search" id="city" name="input" value="" placeholder="Enter destination here 😊" required>
                 </div>
 
                 <div
                     id="error-message">
                 </div>
                     
-                <div id="departure-date">
+                <div id="departure">
                     <div class="title">
                         <label for="departure-date">Departure:</label>
                         <i class="fas fa-plane-departure"></i>
@@ -36,53 +36,8 @@
                     <input type="date" class="date-input" id="departure-date" name="go-date" placeholder="DD-MM-YYYY" required>
                 </div>
 
-                <input type="submit" name="ready-to-go" value="Search" onclick="return Client.handleSearch(event)" onsubmit="return Client.handleSearch(event)">
+                <input type="submit" name="ready-to-go" value="Search" onclick="return Client.getTravelInfo(event)">
             </form>
-
-            <!-- <section id="travel_modal" class="modal">
-                <div class="modal-content">
-                    <div>
-                        <span class="close">&times;</span>
-                    </div>
-
-                    <div class="modal_info">
-                        <img id="modal_img" src="../media/bridgebackground.jpg">
-
-                        <p>
-                            <h2>Travel to <span class="location">Rome,</span>
-                                <span class="country">
-                                    Italy
-                                </span>
-                            </h2>
-                            <strong>Departure: </strong>
-                            <span id="date">
-                                06/11/2020
-                            </span>
-                        </p>
-
-                        <p>
-                            <strong>Travel to: </strong><span class="location">Rome, </span>
-                            <span class="country">
-                                Italy
-                            </span>
-                            <span id="days_to_travel">
-                                in 22 days from now.
-                            </span>
-                        </p>
-
-                        <p>
-                            <strong>Weather:</strong>
-                            <span id="max_temp">Max: 28º</span>
-                            <span id="min_temp">, Low: 12º</span>
-                            <span id="weather"></span>
-                        </p>
-                        
-                        <input id="modal_button" type="button" value="Export to PDF">
-                            <i class="far fa-file-pdf"></i>
-                        <input id="modal_button" type="button" value="Print Journey">
-                    </div>
-                </div>
-            </section> -->
         </div>
 
         <footer>
@@ -94,7 +49,5 @@
                 <a href="http://www.github.com/"><i class="fab fa-github-square fa-2x"></i></a>
             </div>
         </footer>
-
-        <!-- <script src=".main.js"></script> -->
     </body>
 </html>
