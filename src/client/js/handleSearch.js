@@ -1,6 +1,8 @@
 const axios = require('axios');
 
-async function getTravelInfo() {
+async function getTravelInfo(event) {
+    // Prevents the form submission action of clicking the "Search" button
+    event.preventDefault();
 
     // Users input on city <input id="city">
     var city = document.getElementById("city").value;
@@ -8,17 +10,15 @@ async function getTravelInfo() {
     // Users input on city <input id="departure-date">
     var departureDate = document.getElementById("departure-date").value;
 
-    // Axios get: first parameter its the URL path and the second is the configuration
-    let response = await axios.get('/travel-info', 
-        {
-            params: {
-                city: city,
-                departureDate: departureDate
-            }
+    // Axios GET request
+    let response = await axios ({
+        method: 'GET',
+        url: '/travel-info',
+        params: {
+            city: city,
+            departureDate: departureDate
         }
-    );
-
+    });
 }
-
 
 export { getTravelInfo }

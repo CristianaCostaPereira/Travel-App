@@ -1,7 +1,11 @@
+const axios = require("axios");
 const dotenv = require('dotenv').config();
 
 const geoUser = process.env.GEO_USERNAME;
 console.log(geoUser);
+
+// Empty JS object to act as endpoint for all routes including as the API endpoint
+let travelInfo = {};
 
 var path = require("path");
 
@@ -41,23 +45,48 @@ const server = app.listen (port, () => {
 
 
 // get route for travel info
-app.get('/travel-info', function (req, res) {
-
-    let city = "";
-    let date = "";
-    let dateDiff = "";
+app.get('/travel-info', async (request, response) => {
     
-    let response = {
-        "success":true,
-        "trip": {
-            "departDate":1593475200000,
-            "city":"London",
-            "country":"United Kingdom",
-            "cityId":2643743,
-            "days":-112,
-            "weather":"No forecast for this city",
-            "imageUrl":"https://pixabay.com/get/53e3d5434f57b10ff3d8992cc62e3f77173fd8ed4e507749762d7add914fc4_640.jpg"
-        }
+    travelInfo = {};
+
+    let city = request.query['city'];    
+    let date = request.query['departureDate'];
+    try {
+
+        await fetchGeoName(city, 'buzica');
+        
+        // response.send(result);
+
+        response.json({
+            success: true,
+            travelInfo: travelInfo
+        });
+
+    } catch(error) {
+        response.send(error.message);
     }
-    res.send(response);
-})
+});
+
+
+const fetchGeoName = async (city, user) => {
+    // const request = await fetch(`http://api.geonames.org/searchJSON?maxRows=1&q=${city}&username=${user}`);
+    // const res = await request.json();
+
+    const result = await axios ({
+        method: 'GET',
+        url: 'http://api.geonames.org/searchJSON',
+        params: {
+            q: city,
+            username: user,
+            maxRows: 10
+        }
+    });
+
+    // const resu = await result.json();
+
+    travelInfo.city = result;
+    // travelInfo.city = result.geonames[0].name;
+    // travelInfo.country = result.geonames[0].countryName;
+    // travelInfo.cityId = result.geonames[0].geonameId;
+}
+
