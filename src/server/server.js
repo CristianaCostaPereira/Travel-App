@@ -1,9 +1,6 @@
-const dotenv = require('dotenv').config({
-    path: '../../.env'
-});
+const dotenv = require('dotenv').config();
 
 const geoUser = process.env.GEO_USERNAME;
-
 console.log(geoUser);
 
 var path = require("path");
