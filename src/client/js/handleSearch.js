@@ -1,14 +1,25 @@
 const axios = require('axios');
 
-async function getTravelInfo(event) {
+// Function to get the Form Info
+const getTravelInfo = async (event) => {
     // Prevents the form submission action of clicking the "Search" button
     event.preventDefault();
 
     // Users input on city <input id="city">
-    var city = document.getElementById("city").value;
+    const city = document.getElementById("city").value;
 
     // Users input on city <input id="departure-date">
-    var departureDate = document.getElementById("departure-date").value;
+    const departureDate = document.getElementById("departure-date").value;
+
+    // Show date value despite of the timezone
+    const today = new Date();
+    const timeOffset = today.getTimezoneOffset() * 60000;
+
+    const data = {
+        city: city,
+        departureDate: departureDate,
+        timeOffset: timeOffset
+    };
 
     // Axios GET request
     let response = await axios ({
@@ -19,6 +30,10 @@ async function getTravelInfo(event) {
             departureDate: departureDate
         }
     });
+    debugger;    
 }
 
+
+
 export { getTravelInfo }
+

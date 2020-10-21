@@ -1,6 +1,18 @@
 const axios = require("axios");
 const dotenv = require('dotenv').config();
 
+const test = {
+    data: {
+        city: "London",
+        cityId: 2643743,
+        country: "United Kingdom",
+        days: -113,
+        departDate: 1593475200000,
+        imageUrl: "https://pixabay.com/get/53e3d5434f57b10ff3d8992cc62e3f77173fd8ed4e507749762d7cd1904fc2_640.jpg",
+        weather: "No forecast for this city"
+    }
+}
+
 const geoUser = process.env.GEO_USERNAME;
 console.log(geoUser);
 
@@ -49,22 +61,27 @@ app.get('/travel-info', async (request, response) => {
     
     travelInfo = {};
 
-    let city = request.query['city'];    
+    let city = request.query['city'];
     let date = request.query['departureDate'];
-    try {
+    // try {
 
-        await fetchGeoName(city, 'buzica');
+    //     await fetchGeoName(city, geoUser);
         
-        // response.send(result);
+    //     // response.send(result);
 
-        response.json({
-            success: true,
-            travelInfo: travelInfo
-        });
+    //     response.json({
+    //         success: true,
+    //         travelInfo: travelInfo
+    //     });
 
-    } catch(error) {
-        response.send(error.message);
-    }
+    // } catch(error) {
+    //     response.send(error.message);
+    // }
+
+    // async function getTravelInfo(event) {}
+    
+
+    response.send(test);
 });
 
 
@@ -74,10 +91,10 @@ const fetchGeoName = async (city, user) => {
 
     const result = await axios ({
         method: 'GET',
-        url: 'http://api.geonames.org/searchJSON',
+        url: 'http://api.geonames.org/searchJSON?',
         params: {
             q: city,
-            username: user,
+            username: geoUser,
             maxRows: 10
         }
     });
