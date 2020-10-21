@@ -30,7 +30,6 @@ const getTravelInfo = async (event) => {
             departureDate: departureDate
         }
     });
-    debugger;    
 }
 
 

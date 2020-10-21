@@ -16,6 +16,12 @@ const test = {
 const geoUser = process.env.GEO_USERNAME;
 console.log(geoUser);
 
+const weather = process.env.WEATHER_API;
+console.log(weather);
+
+const imagePixabay = process.env.PIXABAY_API;
+console.log(imagePixabay);
+
 // Empty JS object to act as endpoint for all routes including as the API endpoint
 let travelInfo = {};
 
