@@ -1,18 +1,6 @@
 const axios = require("axios");
 const dotenv = require('dotenv').config();
 
-const test = {
-    data: {
-        city: "London",
-        cityId: 2643743,
-        country: "United Kingdom",
-        days: -113,
-        departDate: 1593475200000,
-        imageUrl: "https://pixabay.com/get/53e3d5434f57b10ff3d8992cc62e3f77173fd8ed4e507749762d7cd1904fc2_640.jpg",
-        weather: "No forecast for this city"
-    }
-}
-
 const geoUser = process.env.GEO_USERNAME;
 console.log(geoUser);
 
@@ -21,6 +9,12 @@ console.log(weather);
 
 const imagePixabay = process.env.PIXABAY_API;
 console.log(imagePixabay);
+
+// Belongs to the Geo Names query params that has value one, because we just want one single result
+const maxRows = 1;
+
+let latitude = "";
+let longitude = "";
 
 // Empty JS object to act as endpoint for all routes including as the API endpoint
 let travelInfo = {};
@@ -65,51 +59,50 @@ const server = app.listen (port, () => {
 // get route for travel info
 app.get('/travel-info', async (request, response) => {
     
+    // Empty to clean the last result
     travelInfo = {};
 
+    // Info from the users inputs
     let city = request.query['city'];
     let date = request.query['departureDate'];
-    // try {
 
-    //     await fetchGeoName(city, geoUser);
-        
-    //     // response.send(result);
+    // Call function to call Geonames API
+    // Axios GET method
+    let result = await axios ({
+        method: 'GET',
+        url: 'http://api.geonames.org/searchJSON',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        params: {
+            q: city,
+            maxRows: maxRows,
+            username: geoUser
+        }
+    }).then(function(outcome){
+        latitude = outcome.data.geonames[0].lat;
+        longitude = outcome.data.geonames[0].lng; 
 
-    //     response.json({
-    //         success: true,
-    //         travelInfo: travelInfo
-    //     });
+    }).catch(function (error) {
+        console.log(error);
+    })
 
-    // } catch(error) {
-    //     response.send(error.message);
-    // }
+    response.send('cris');
 
-    // async function getTravelInfo(event) {}
-    
-
-    response.send(test);
+    // Return 'envelope'
+    // response.send(xx);
 });
 
 
-const fetchGeoName = async (city, user) => {
-    // const request = await fetch(`http://api.geonames.org/searchJSON?maxRows=1&q=${city}&username=${user}`);
-    // const res = await request.json();
 
-    const result = await axios ({
-        method: 'GET',
-        url: 'http://api.geonames.org/searchJSON?',
-        params: {
-            q: city,
-            username: geoUser,
-            maxRows: 10
-        }
-    });
+// let fetchGeoNames = () => {
 
-    // const resu = await result.json();
+// }
 
-    travelInfo.city = result;
-    // travelInfo.city = result.geonames[0].name;
-    // travelInfo.country = result.geonames[0].countryName;
-    // travelInfo.cityId = result.geonames[0].geonameId;
-}
+// let fetchWeatherAPI = () => {
 
+// }
+
+// let fetchPixabay = () => {
+
+// }

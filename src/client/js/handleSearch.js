@@ -11,16 +11,6 @@ const getTravelInfo = async (event) => {
     // Users input on city <input id="departure-date">
     const departureDate = document.getElementById("departure-date").value;
 
-    // Show date value despite of the timezone
-    const today = new Date();
-    const timeOffset = today.getTimezoneOffset() * 60000;
-
-    const data = {
-        city: city,
-        departureDate: departureDate,
-        timeOffset: timeOffset
-    };
-
     // Axios GET request
     let response = await axios ({
         method: 'GET',
@@ -31,8 +21,6 @@ const getTravelInfo = async (event) => {
         }
     });
 }
-
-
 
 export { getTravelInfo }
 
