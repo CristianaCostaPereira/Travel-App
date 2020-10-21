@@ -79,15 +79,15 @@ app.get('/travel-info', async (request, response) => {
             maxRows: maxRows,
             username: geoUser
         }
-    }).then(function(outcome){
+    }).then((outcome) => {
         latitude = outcome.data.geonames[0].lat;
         longitude = outcome.data.geonames[0].lng; 
 
-    }).catch(function (error) {
+    }).catch((error) => {
         console.log(error);
     })
-
-    response.send('cris');
+        console.log("Working")
+        response.send('Filas e Bárbara');
 
     // Return 'envelope'
     // response.send(xx);
