@@ -162,22 +162,22 @@ let daysToTrip = (departureDate) => {
     //Send actual date to client
     // travelInfo.dateToday = today
 
-    var mydate = new Date('2014-04-03');
+    let mydate = new Date('2014-04-03');
 
 	// To set two dates to two variables 
 	let date1 = new Date("06/30/2020"); 
     let date2 = new Date("07/30/2020"); 
 
     // To calculate the time difference of two dates 
-    var Difference_In_Time = date2.getTime() - date1.getTime(); 
+    var DifferenceInTime = date2.getTime() - date1.getTime(); 
 
     // To calculate the no. of days between two dates 
-    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24); 
+    var DifferenceInDays = DifferenceInTime / (1000 * 3600 * 24); 
 
     //To display the final no. of days (result) 
-    console.log('Your trip is ' + Difference_In_Days + ' days away 😀.');
+    console.log('Your trip is ' + DifferenceInDays + ' days away 😀.');
 
-    let response = 'Your trip is ' + Difference_In_Days + ' days away 😀.';
+    let response = 'Your trip is ' + DifferenceInDays + ' days away 😀.';
 
     // Send to client
     travelInfo.daysAway = response;
