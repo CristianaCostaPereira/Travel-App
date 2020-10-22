@@ -16,6 +16,8 @@ const MAX_ROWS = process.env.MAX_ROWS;
 // Belongs to the Pixabay query params that has value photo
 const IMAGE_TYPE = process.env.IMAGE_TYPE;
 
+const TEMPERATURE_SYMBOL = process.env.TEMPERATURE_SYMBOL;
+
 let latitude = "";
 let longitude = "";
 
@@ -59,7 +61,6 @@ const server = app.listen (port, () => {
     console.log(`Server is running on localhost:${port}`);
 });
 
-
 // get route for travel info
 app.get('/travel-info', async (request, response) => {
     
@@ -69,6 +70,8 @@ app.get('/travel-info', async (request, response) => {
     // Info from the users inputs
     let city = request.query['city'];
     let date = request.query['departureDate'];
+
+    daysToTrip(date);
 
     // Because let city is outside of fetchGeoNames method scope, we need to pass it as a parameter
     await fetchGeoNames(city);
@@ -98,7 +101,7 @@ let fetchGeoNames = async (city) => {
     }).then((outcome) => {
         latitude = outcome.data.geonames[0].lat;
         longitude = outcome.data.geonames[0].lng;
-        travelInfo.cityName = outcome.data.geonames[0].name;
+        travelInfo.cityName = outcome.data.geonames[0].name; // To be shown in to my client
 
     }).catch((error) => {
         console.log(error);
@@ -118,7 +121,7 @@ let fetchWeatherAPI = async () => {
             lon: longitude
         }
     }).then((outcome) => {
-        travelInfo.temperature = outcome.data.data[0].temp;
+        travelInfo.temperature = outcome.data.data[0].temp + TEMPERATURE_SYMBOL;
         travelInfo.weather = outcome.data.data[0].weather.description;
 
     }).catch((error) => {
@@ -144,4 +147,38 @@ let fetchPixabay = async (city) => {
     }).catch((error) => {
         console.log(error);
     })
+}
+
+let daysToTrip = (date) => {
+	// calculation of no. of days between two date 
+
+	// To set two dates to two variables 
+	var date1 = new Date("06/30/2020"); 
+    var date2 = new Date("07/30/2020"); 
+
+// To calculate the time difference of two dates 
+var Difference_In_Time = date2.getTime() - date1.getTime(); 
+
+// To calculate the no. of days between two dates 
+var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24); 
+
+//To display the final no. of days (result) 
+console.log("Your trip is" + ' ' + Difference_In_Days + ' ' + "days" + ' ' + "away" + '.');
+
+    // let today = new Date();
+    // let day = String(today.getDate()).padStart(2, '0');
+    // let month = String(today.getMonth() + 1).padStart(2, '0'); // Because January is 0!
+    // let year = today.getFullYear();
+
+    // today = day + '/' + month + '/' + year;
+    // console.log(today)
+    // travelInfo.dateToday = today
+
+    // var mydate = new Date('2014-04-03');
+    // console.log('2014-04-03');
+
+
+
+    //meter no ernv
+
 }

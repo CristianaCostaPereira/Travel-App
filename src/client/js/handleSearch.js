@@ -11,7 +11,7 @@ const getTravelInfo = async (event) => {
     // Users input on city <input id="departure-date">
     const departureDate = document.getElementById("departure-date").value;
 
-    // Axios GET request
+    // Axios GET request to the server
     let response = await axios ({
         method: 'GET',
         url: '/travel-info',
@@ -21,8 +21,8 @@ const getTravelInfo = async (event) => {
         }
     });
 
+    // Get image from pixabay
     document.getElementById("city-image").src = response.data.pictureURL;
-
 }
 
 export { getTravelInfo }
