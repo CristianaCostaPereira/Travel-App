@@ -151,30 +151,25 @@ let fetchPixabay = async (city) => {
 
 // Function that calculates the days until travel
 let daysToTrip = (departureDate) => {
+
     let today = new Date();
     let day = String(today.getDate()).padStart(2, '0');
     let month = String(today.getMonth() + 1).padStart(2, '0'); // Because January is 0!
     let year = today.getFullYear();
 
-    today = day + '/' + month + '/' + year;
-    console.log(today)
-
-    // Send actual date to client
-    // travelInfo.dateToday = today
-
     // Set two dates to two variables    
-    let dateNow = new Date();
-    let travelDate = new Date("2020/11/22"); 
+    let dateNow = new Date(year + '/' + month + '/' + day);
+    let travelDate = new Date(departureDate); 
 
     // To calculate the time difference of two dates 
-    var DifferenceInTime = travelDate.getTime() - dateNow.getTime(); 
+    let DifferenceInTime = travelDate.getTime() - dateNow.getTime();
 
-    // To calculate the no. of days between two dates 
-    var DifferenceInDays = DifferenceInTime / (1000 * 3600 * 24); 
+    // To calculate the number of days between two dates 
+    let DifferenceInDays = DifferenceInTime / (1000 * 3600 * 24);
+    DifferenceInDays = DifferenceInDays.toFixed(0);
 
-    //To display the final no. of days (result) 
-    console.log('Your trip is ' + DifferenceInDays + ' days away.');
-
+    // To display the final number of days (result) 
+    console.log('Your trip is ' + DifferenceInDays + ' day away.');
     let response = 'Your trip is ' + DifferenceInDays + ' days away 😄.';
 
     // Send to client
