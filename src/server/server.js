@@ -69,9 +69,9 @@ app.get('/travel-info', async (request, response) => {
 
     // Info from the users inputs
     let city = request.query['city'];
-    let date = request.query['departureDate'];
+    let departureDate = request.query['departureDate'];
 
-    daysToTrip(date);
+    daysToTrip(departureDate);
 
     // Because let city is outside of fetchGeoNames method scope, we need to pass it as a parameter
     await fetchGeoNames(city);
@@ -149,12 +149,24 @@ let fetchPixabay = async (city) => {
     })
 }
 
-let daysToTrip = (date) => {
-	// calculation of no. of days between two date 
+// Calculation of days between two dates
+let daysToTrip = (departureDate) => {
+    let today = new Date();
+    let day = String(today.getDate()).padStart(2, '0');
+    let month = String(today.getMonth() + 1).padStart(2, '0'); // Because January is 0!
+    let year = today.getFullYear();
+
+    today = day + '/' + month + '/' + year;
+    console.log(today)
+
+    //Send actual date to client
+    // travelInfo.dateToday = today
+
+    var mydate = new Date('2014-04-03');
 
 	// To set two dates to two variables 
-	var date1 = new Date("06/30/2020"); 
-    var date2 = new Date("07/30/2020"); 
+	let date1 = new Date("06/30/2020"); 
+    let date2 = new Date("07/30/2020"); 
 
     // To calculate the time difference of two dates 
     var Difference_In_Time = date2.getTime() - date1.getTime(); 
@@ -163,27 +175,13 @@ let daysToTrip = (date) => {
     var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24); 
 
     //To display the final no. of days (result) 
-    console.log('Your trip is ' + Difference_In_Days + ' days away 😉.');
+    console.log('Your trip is ' + Difference_In_Days + ' days away 😀.');
 
-    let response = 'Your trip is ' + Difference_In_Days + ' days away 😉.';
+    let response = 'Your trip is ' + Difference_In_Days + ' days away 😀.';
 
+    // Send to client
     travelInfo.daysAway = response;
 
 
-    // let today = new Date();
-    // let day = String(today.getDate()).padStart(2, '0');
-    // let month = String(today.getMonth() + 1).padStart(2, '0'); // Because January is 0!
-    // let year = today.getFullYear();
-
-    // today = day + '/' + month + '/' + year;
-    // console.log(today)
-    // travelInfo.dateToday = today
-
-    // var mydate = new Date('2014-04-03');
-    // console.log('2014-04-03');
-
-
-
-    //meter no ernv
 
 }
