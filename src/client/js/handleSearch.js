@@ -20,6 +20,9 @@ const getTravelInfo = async (event) => {
             departureDate: departureDate
         }
     });
+
+    document.getElementById("city-image").src = response.data.pictureURL;
+
 }
 
 export { getTravelInfo }
