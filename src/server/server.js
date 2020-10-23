@@ -99,9 +99,17 @@ let fetchGeoNames = async (city) => {
             username: GEO_USERNAME
         }
     }).then((outcome) => {
-        latitude = outcome.data.geonames[0].lat;
-        longitude = outcome.data.geonames[0].lng;
-        travelInfo.cityName = outcome.data.geonames[0].name; // To be shown in to my client
+        let geonames = outcome.data.geonames;
+
+        // Check the result geonames array size
+        if (geonames.length > 0) {
+            latitude = outcome.data.geonames[0].lat;
+            longitude = outcome.data.geonames[0].lng;
+            travelInfo.cityName = outcome.data.geonames[0].name; // To be shown in to my client
+
+        } else {
+            travelInfo.errorMessage = 'Enter a valid city'
+        }
 
     }).catch((error) => {
         console.log(error);

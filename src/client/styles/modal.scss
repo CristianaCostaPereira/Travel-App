@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@700&display=swap');
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
+  font-family: 'Piazzolla', serif;
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -11,6 +14,18 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px 16px;
+}
+
+.modal-body img {
+  width: 100%;
+  height: auto;
 }
 
 /* Modal Content */
@@ -59,8 +74,6 @@
   background-color: #5cb85c;
   color: white;
 }
-
-.modal-body {padding: 2px 16px;}
 
 .modal-footer {
   padding: 2px 16px;

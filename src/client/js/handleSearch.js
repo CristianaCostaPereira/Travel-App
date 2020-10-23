@@ -5,14 +5,16 @@ const axios = require('axios');
 
 // Function to get the Form Info
 const getTravelInfo = async (event) => {
-    // Prevents the form submission action of clicking the "Search" button
-    event.preventDefault();
 
     // Users input on city <input id="city">
     const city = document.getElementById("city").value;
 
     // Users input on city <input id="departure-date">
     const departureDate = document.getElementById("departure-date").value;
+
+    if (departureDate =='' || city =='') {
+        return
+    }
 
     // Axios GET request to the server
     let response = await axios ({
@@ -24,10 +26,21 @@ const getTravelInfo = async (event) => {
         }
     });
 
-    // Get image from pixabay
-    document.getElementById("city-image").src = response.data.pictureURL;
+    // Display error message if invalid results returned from server
+    if (response.data.errorMessage) {
+        document.getElementById("error-message").innerHTML = response.data.errorMessage;
 
-    openModal();
+    } else {
+        document.getElementById("error-message").innerHTML = "";
+        
+        document.getElementById("modal-city-name").innerHTML = response.data.cityName;
+        document.getElementById("modal-city-image").src = response.data.pictureURL;
+        document.getElementById("modal-days-away").innerHTML = response.data.daysAway;
+        document.getElementById("modal-temperature").innerHTML = response.data.temperature;
+        document.getElementById("modal-weather").innerHTML = response.data.weather;
+
+        openModal();
+    }
 }
 
 // windou.print();

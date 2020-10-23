@@ -14,7 +14,8 @@
         <h1 class="heading">Travel Journey</h1>
         
         <div id="app">
-            <form class="" onsubmit="">
+            <!-- onsubmit="return false" prevents the page reload when "Search" button is clicked-->
+            <form class="" onsubmit="return false">
                 <div>
                     <div class="title">
                         <label for="destination">Destination:</label>
@@ -46,11 +47,14 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <span class="close">&times;</span>
-                        <h2>Modal Header</h2>
+                        <h2>Travel Destination</h2>
                     </div>
                     <div class="modal-body">
-                        <p>Some text in the Modal Body</p>
-                        <img id="city-image" alt="city">
+                        <h2 id="modal-city-name"></h2>
+                        <img id="modal-city-image" alt="city">
+                        <span id="modal-days-away"></span>
+                        <span id="modal-temperature"></span>
+                        <span id="modal-weather"></span>
                     </div>
                     <div class="modal-footer">
                         <h3>Modal Footer</h3>
