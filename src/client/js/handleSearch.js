@@ -32,7 +32,7 @@ const getTravelInfo = async (event) => {
 
     } else {
         document.getElementById("error-message").innerHTML = "";
-        
+
         document.getElementById("modal-city-name").innerHTML = response.data.cityName;
         document.getElementById("modal-city-image").src = response.data.pictureURL;
         document.getElementById("modal-days-away").innerHTML = response.data.daysAway;
