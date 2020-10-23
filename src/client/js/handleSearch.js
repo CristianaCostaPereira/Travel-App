@@ -36,8 +36,8 @@ const getTravelInfo = async (event) => {
         document.getElementById("modal-city-name").innerHTML = response.data.cityName;
         document.getElementById("modal-city-image").src = response.data.pictureURL;
         document.getElementById("modal-days-away").innerHTML = response.data.daysAway;
-        document.getElementById("modal-temperature").innerHTML = response.data.temperature;
-        document.getElementById("modal-weather").innerHTML = response.data.weather;
+        document.getElementById("modal-temperature").innerHTML = "Temperature: " + response.data.temperature;
+        document.getElementById("modal-weather").innerHTML = "Weather: " + response.data.weather;
 
         openModal();
     }
