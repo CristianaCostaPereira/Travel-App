@@ -25,5 +25,7 @@ const getTravelInfo = async (event) => {
     document.getElementById("city-image").src = response.data.pictureURL;
 }
 
+// windou.print();
+
 export { getTravelInfo }
 
