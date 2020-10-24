@@ -10,15 +10,18 @@ body {
     align-items: center;
     font-family: sans-serif;
     color: rgb(27,136,136);
-    background-image: url("../media/bbackground.jpg"); // CHANGE THE PICTUR TE MOUNTAIN ONE
+    background-image: url("../media/mountainbackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #error-message {
-    color: red;
-    font-size: 12px;
+    margin-top: -10px;
+    color: rgb(255, 0, 0);
+    font-size: 14px;
     font-weight: 700;
+    padding-bottom: 8px;
+    padding-left: 35%;
 }
 
 main {
