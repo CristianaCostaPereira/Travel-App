@@ -25,6 +25,9 @@ let longitude = "";
 // What the client will receive
 let travelInfo = {};
 
+// To store all the resuls
+let travelHistory = [];
+
 var path = require("path");
 
 // Express package to run the server and its routes
@@ -61,7 +64,8 @@ const server = app.listen (port, () => {
     console.log(`Server is running on localhost:${port}`);
 });
 
-// get route for travel info
+// Get route for travel info
+// Build my 'envelope'
 app.get('/travel-info', async (request, response) => {
     
     // Empty to clean the last result
@@ -80,8 +84,16 @@ app.get('/travel-info', async (request, response) => {
 
     await fetchPixabay(city);
 
+    // Saves the search results to an array
+    travelHistory.push(travelInfo);
+
     // Return my 'envelope'
     response.send(travelInfo);
+});
+
+// Route to give me the travel history
+app.get('/travel-history', (request, response) => {
+    response.json(travelHistory);
 });
 
 let fetchGeoNames = async (city) => {
