@@ -38,7 +38,13 @@
                 </div>
 
                 <input type="submit" name="ready-to-go" value="Search" onclick="return Client.getTravelInfo(event)">
+                <span id="history-button" onclick="return Client.travelHistory()">
+                    Travel Legder
+                </span>
             </form>
+        </div>
+
+        <div id="travel-history-container">
         </div>
 
         <!-- The Modal -->

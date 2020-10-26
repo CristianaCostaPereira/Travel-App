@@ -33,6 +33,15 @@ section {
     margin: 25px auto;
 }
 
+.history-card {
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    opacity: 0.5;
+}
+
 @media screen and (max-width: 800px) {
     .heading {
         display: flex;

@@ -54,3 +54,16 @@ input[type="submit"]:hover {
     color: #fffee4;
     box-shadow: 0 8px 6px 0 rgba(0,0,0,0.2), 0 12px 80px 0 rgba(0,0,0,0.19)
 }
+
+#history-button {
+    color: rgb(53, 60, 136);
+    text-decoration: underline;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+#history-button:hover {
+    font-weight: 700;
+    color: #fffee4;
+}
