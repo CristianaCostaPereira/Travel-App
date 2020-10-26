@@ -12,17 +12,20 @@ const closeModal = () => {
     modal.style.display = "none";
 }
 
+// When the user clicks on <span> (x), close the modal
+// It could simply be: span.onclick = closeModal;
+if (span) {
+    span.addEventListener('click', () => {
+        closeModal();
+    })
+}
+
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         closeModal();
     }
 }
-
-// When the user clicks on <span> (x), close the modal
-// Could simply be: span.onclick = closeModal;
-span.addEventListener('click', () => {
-    closeModal();
-});
 
 export {openModal, closeModal}

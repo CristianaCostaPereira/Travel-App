@@ -10,13 +10,3 @@ describe("Testing the modal open with the information wanted functionality", () 
         expect(typeof openModal).toBe("function");
     });
 });
-
-// describe("Testing the modal closes functionality", () => {
-//     test("Testing the closeModal() function", () => {
-//         expect(closeModal).toBeDefined();
-//     });
-
-//     test("Should be a function", () => {
-//         expect(typeof closeModal).toBe("function");
-//     });
-// });

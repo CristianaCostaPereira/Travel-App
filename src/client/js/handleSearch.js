@@ -1,5 +1,6 @@
 import './modal.js'
 import { openModal } from './modal.js';
+// To include a custom regenerator runtime that will allow me to use async, await with (ES6 or ES Next)!
 import "@babel/polyfill";
 
 const axios = require('axios');
