@@ -1,5 +1,6 @@
 import './modal.js'
 import { openModal } from './modal.js';
+import "@babel/polyfill";
 
 const axios = require('axios');
 
@@ -42,8 +43,6 @@ const getTravelInfo = async (event) => {
         openModal();
     }
 }
-
-// windou.print();
 
 export { getTravelInfo }
 

@@ -20,6 +20,6 @@ window.onclick = function(event) {
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = closeModal;
+// span.onclick = closeModal;
 
 export {openModal, closeModal}
