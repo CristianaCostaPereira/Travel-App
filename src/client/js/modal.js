@@ -14,6 +14,7 @@ const closeModal = () => {
 
 // When the user clicks on <span> (x), close the modal
 // It could simply be: span.onclick = closeModal;
+// Need to insert in a if statement for passing the tests
 if (span) {
     span.addEventListener('click', () => {
         closeModal();
