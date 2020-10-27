@@ -35,10 +35,24 @@
   line-height: 35px;
 }
 
+input[type="button"] {
+  font-size: 14px;
+  font-family: 'Piazzolla', serif;
+  color: #e2dede;
+  width: 100%;
+  border: 2px solid rgb(51, 124, 161);
+  background-color: rgb(122, 184, 214);
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2), 0 6px 80px 0 rgba(0,0,0,0.19);
+}
+
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: rgb(254, 254, 254);
   margin: auto;
   padding: 0;
   border: 1px solid #888;
