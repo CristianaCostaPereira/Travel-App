@@ -43,7 +43,7 @@ An account must be created on all three API's to access the information needed a
 #### Environment Variables
 
 Declare the API keys.<br>
-In the `.env file`, it should look like:
+Create a `.env file`; should look like:
 ```
 GEO_USERNAME="your-api-username"
 WEATHER_API_KEY="your-api-key"
@@ -86,4 +86,4 @@ npm run test
 # Special thanks
 **Nuno Mendonça** :blush:<br>
 There are no words that can *express* my gratitude.<br>
-**THANK YOU!** :sweet_potato::jack_o_lantern:ern:
+**THANK YOU!** :sweet_potato::jack_o_lantern:
