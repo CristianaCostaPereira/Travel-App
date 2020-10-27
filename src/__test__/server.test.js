@@ -1,8 +1,19 @@
-// import "@babel/polyfill";
-// import { fetchGeoNames, fetchWeatherAPI, fetchPixabay } from "../server/server";
+import "@babel/polyfill";
 
-describe("functions file", () => {
-  test("fetchGeoNames should be a function", () => {
-    expect('xxx').toEqual('xxx');
-  })
+const exportServer = require('../server/server');
+const supertest = require('supertest');
+const request = supertest(exportServer );
+
+describe('Get endpoint', () => {
+  it('/travel-info', async (done) => {
+    const response = await request.get('/travel-info');
+    expect(response.status).toBe(200);
+    done();
+  });
+
+  it('/travel-history', async (done) => {
+    const response = await request.get('/travel-history');
+    expect(response.status).toBe(200);
+    done();
+  });
 });

@@ -195,3 +195,6 @@ let daysToTrip = (departureDate) => {
     // Send to client
     travelInfo.daysAway = response;
 }
+
+// Export my server so I can make the tesst to the server
+module.exports = server
