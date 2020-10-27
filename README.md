@@ -1,15 +1,14 @@
 # Travel-App :earth_africa:
 
-Last project for **<ins>Udacity</ins>** course.<br>
+Last project for **Udacity** course.<br>
 Combining all the Front End skills learned into a capstone project.<br>
 This project is based on Webpack, Node.js and complemented by three external API's.<br>
 These API's are:<br>
-* <ins>Geonames</ins>: geographical database that covers all countries;
-* <ins>Weatherbit</ins>: weather data;
-* <ins>Pixabay</ins>: image data.
+* **Geonames**: geographical database that covers all countries;
+* **Weatherbit**: weather data;
+* **Pixabay**: image data.
 
 <img src="https://www.bsb-muenchen.de/fileadmin/bsb/sammlungen/karten/998x400_beschreibung_deudtschlandt_bsb00002969_00001.jpg" width=1000>
-
 
 ## Starting the App
 
@@ -87,4 +86,4 @@ npm run test
 # Special thanks
 **Nuno Mendonça** :blush:<br>
 There are no words that can *express* my gratitude.<br>
-**THANK YOU!** :sweet_potato::jack_o_lantern:
+**THANK YOU!** :sweet_potato::jack_o_lantern:ern:
