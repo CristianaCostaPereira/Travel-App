@@ -1,16 +1,90 @@
-# Travel-App
+# Travel-App :earth_africa:
 
-Last project from Udacity course.<br>
-Combining all the Front End skills learned into a capstone project.
+Last project for **<ins>Udacity</ins>** course.<br>
+Combining all the Front End skills learned into a capstone project.<br>
+This project is based on Webpack, Node.js and complemented by three external API's.<br>
+These API's are:<br>
+* <ins>Geonames</ins>: geographical database that covers all countries;
+* <ins>Weatherbit</ins>: weather data;
+* <ins>Pixabay</ins>: image data.
 
-Note to self:
-Because I used async, await with (ES6 or ES Next) then I needed to install @babel/polyfill but withou the need to write anything in babelrc file.
-Just install npm install --save @babel/polyfill
+<img src="https://www.bsb-muenchen.de/fileadmin/bsb/sammlungen/karten/998x400_beschreibung_deudtschlandt_bsb00002969_00001.jpg" width=1000>
 
-From the documentation:
 
-Because this is a polyfill (which will run before your source code), we need it to be a dependency, not a devDependency
+## Starting the App
 
-And finally you need to import @bable/polyfill in your mainJS (App.js) file like:
+Clone or fork the project.<br>
+Then install all the required packages:
 
-import "@babel/polyfill";
+`cd` into your new folder and run:
+```
+npm install
+```
+
+#### Dependencies:
+
+    "@babel/polyfill": "^7.12.1",
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dev-server": "^0.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "webpack": "^5.1.3",
+    "webpack-cli": "^4.1.0"
+
+## Set the API's
+
+An account must be created on all three API's to access the information needed and to validate the requests.
+
+* [Geonames](http://www.geonames.org/export/web-services.html)
+* [Weatherbit](https://www.weatherbit.io/account/create)
+* [Pixabay](https://pixabay.com/api/docs/)
+
+#### Environment Variables
+
+Declare the API keys.<br>
+In the `.env file`, it should look like:
+```
+GEO_USERNAME="your-api-username"
+WEATHER_API_KEY="your-api-key"
+PIXABAY_API_KEY="your-api-key"
+```
+
+## Set the App
+
+To run the project on the development webpack server, open the terminal in the root directory and run the command:
+
+```
+npm run dev
+```
+
+To run the project on the production webpack server, open terminal in the root directory and run the command:
+
+```
+npm run build
+```
+To run the server:
+
+```
+npm run start
+```
+
+#### App in the browser
+Click [here](http://localhost:3000/) to see the app in the browser.
+
+## Tests
+
+To run the tests run the command:
+```
+npm run test
+```
+
+## Author
+
+[Cristiana Costa Pereira](https://github.com/CristianaCostaPereira) :octocat:
+
+# Special thanks
+**Nuno Mendonça** :blush:<br>
+There are no words that can *express* my gratitude.<br>
+**THANK YOU!** :sweet_potato::jack_o_lantern:
