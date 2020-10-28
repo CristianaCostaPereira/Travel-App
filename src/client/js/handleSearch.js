@@ -1,7 +1,8 @@
-import './modal.js'
+import './modal.js';
+import './handleHistory.js';
 import { openModal } from './modal.js';
 // To include a custom regenerator runtime that will allow me to use async, await with (ES6 or ES Next)!
-import "@babel/polyfill";
+import '@babel/polyfill';
 
 const axios = require('axios');
 
@@ -67,7 +68,6 @@ if (searchEnter) {
     });
     searchEnterVal = searchEnter.value;
 }
-
 
 export { getTravelInfo }
 

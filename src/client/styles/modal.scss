@@ -98,6 +98,15 @@ input[type="button"] {
 }
 
 @media print {
+
+  // To print just one page
+  html, body {
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+  }
+
   .modal-content {
     width: 95%;
     padding: 10px;
@@ -110,12 +119,6 @@ input[type="button"] {
   .close {
     display: none;
   }
-
-  // .modal-body img {
-  //   width: 30%;
-  //   height: auto;
-  //   padding-bottom: 15px;
-  // }
 }
 
 @media screen and (max-width: 1700px) {

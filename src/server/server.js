@@ -163,6 +163,8 @@ let fetchPixabay = async (city) => {
         }
     }).then((outcome) => {
         travelInfo.pictureURL = outcome.data.hits[0].webformatURL;
+        travelInfo.tinyURL = outcome.data.hits[0].previewURL;
+
 
     }).catch((error) => {
         console.log(error);
