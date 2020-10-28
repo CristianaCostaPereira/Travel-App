@@ -192,7 +192,7 @@ let daysToTrip = (departureDate) => {
 
     // To display the final number of days (result) 
     console.log('Your trip is ' + DifferenceInDays + ' day away.');
-    let response = 'Your trip is <span style="font-weight: 700;">' + DifferenceInDays + '</span> days away 😄.';
+    let response = 'Your trip is <span style="font-weight: 700;">' + DifferenceInDays + '</span> days away 😄';
 
     // Send to client
     travelInfo.daysAway = response;
