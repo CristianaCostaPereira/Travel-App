@@ -39,7 +39,7 @@ input[type="button"] {
   font-size: 14px;
   font-family: 'Piazzolla', serif;
   color: #e2dede;
-  width: 100%;
+  width: 50%;
   border: 2px solid rgb(51, 124, 161);
   background-color: rgb(122, 184, 214);
   padding: 8px;
@@ -47,6 +47,7 @@ input[type="button"] {
   cursor: pointer;
   transition-duration: 0.4s;
   box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2), 0 6px 80px 0 rgba(0,0,0,0.19);
+  margin: 30px;
 }
 
 /* Modal Content */
@@ -94,6 +95,27 @@ input[type="button"] {
   padding: 2px 16px;
   background-color: #7ab8d6;
   color: white;
+}
+
+@media print {
+  .modal-content {
+    width: 95%;
+    padding: 10px;
+  }
+
+  input[type="button"] {
+    display: none;  
+  }
+
+  .close {
+    display: none;
+  }
+
+  // .modal-body img {
+  //   width: 30%;
+  //   height: auto;
+  //   padding-bottom: 15px;
+  // }
 }
 
 @media screen and (max-width: 1700px) {
