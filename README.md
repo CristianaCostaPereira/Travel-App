@@ -78,6 +78,9 @@ To run the tests run the command:
 ```
 npm run test
 ```
+It should appear in the terminal that every code tested passed. Like so:
+
+![picture](src/client/media/tests_completed.jpg)
 
 ## Author
 
