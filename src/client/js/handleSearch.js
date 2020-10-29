@@ -53,7 +53,11 @@ const getTravelInfo = async (event) => {
 // Blocks past dates
 // Unables users to pick a date date that already passed
 let today = new Date().toISOString().split('T')[0];
-document.getElementsByName("setTodaysDate")[0].setAttribute('min', today);
+var setTodaysDate = document.getElementsByName("setTodaysDate");
+
+if (setTodaysDate && setTodaysDate[0]) {
+    setTodaysDate[0].setAttribute('min', today)
+}
 
 // Get the input field by using the 'enter' key on the keyboard
 var searchEnter = document.getElementById("departure-date");
