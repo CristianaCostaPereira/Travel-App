@@ -39,7 +39,7 @@ input[type="submit"] {
     width: 100%;
     text-transform: uppercase;
     border: 2px solid rgba(23, 128, 123, 0.878);
-    background-color: rgba(25, 134, 134, 0.878);
+    background-color: rgba(37, 150, 121, 0.590);
     padding: 8px;
     border-radius: 6px;
     cursor: pointer;
@@ -49,7 +49,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: rgba(41, 156, 127, 0.588);
+    background-color: rgb(27, 136, 136);
     color: rgb(255, 254, 228);
     box-shadow: 0 8px 6px 0 rgba(0,0,0,0.2), 0 12px 80px 0 rgba(0,0,0,0.19)
 }
@@ -61,8 +61,8 @@ input[type="submit"]:hover {
     font-family: 'Source Serif Pro', serif;
     color: rgba(255, 255, 255, 0.67);
     text-transform: uppercase;
-    border: 2px solid rgba(23, 128, 123, 0.878);
-    background-color: rgba(25, 134, 134, 0.400);
+    border: 2px solid rgba(138, 148, 148, 0.88);
+    background-color: rgba(128, 128, 128, 0.48);
     padding: 8px;
     border-radius: 6px;
     cursor: pointer;
@@ -71,8 +71,8 @@ input[type="submit"]:hover {
 }
 
 #history-button:hover {
-    font-weight: 700;
     color: rgb(255, 254, 228);
-    background-color: rgba(41, 156, 127, 0.588);
+    // background-color: rgba(41, 156, 127, 0.588);
+    background-color: rgb(138, 148, 148);
     box-shadow: 0 8px 6px 0 rgba(0,0,0,0.2), 0 12px 80px 0 rgba(0,0,0,0.19)
 }

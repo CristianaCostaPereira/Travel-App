@@ -42,6 +42,10 @@ const getTravelInfo = async (event) => {
         document.getElementById("modal-temperature").innerHTML = "<strong>Temperature: </strong>" + response.data.temperature;
         document.getElementById("modal-weather").innerHTML = "<strong>Weather: </strong>" + response.data.weather;
 
+        // After the request is made set the parameters to empty, so the user could type another city/date without having the last one showing in the form
+        document.getElementById("city").value = "";
+        document.getElementById("departure-date").value = "";
+
         openModal();
     }
 }
