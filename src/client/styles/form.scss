@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@700&display=swap');
 
 form {
-    border: 2px solid #545454;
+    border: 2px solid rgb(84, 84, 84);
     border-radius: 10px;
     padding: 40px;
-    background: #ffffff61;
+    background: rgba(255, 255, 255, 0.38);
     width: 400px;
 }
 
@@ -35,11 +35,11 @@ input[type="date"] {
 input[type="submit"] {
     font-size: 14px;
     font-family: 'Source Serif Pro', serif;
-    color: #e2dede;
+    color: rgb(226, 222, 222);
     width: 100%;
     text-transform: uppercase;
-    border: 2px solid #17807be0;
-    background-color: #198686e0;
+    border: 2px solid rgba(23, 128, 123, 0.878);
+    background-color: rgba(25, 134, 134, 0.878);
     padding: 8px;
     border-radius: 6px;
     cursor: pointer;
@@ -49,20 +49,30 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #299c7f96;
-    color: #fffee4;
+    background-color: rgba(41, 156, 127, 0.588);
+    color: rgb(255, 254, 228);
     box-shadow: 0 8px 6px 0 rgba(0,0,0,0.2), 0 12px 80px 0 rgba(0,0,0,0.19)
 }
 
 #history-button {
-    color: rgb(53, 60, 136);
-    text-decoration: underline;
-    cursor: pointer;
     display: flex;
     justify-content: center;
+    font-size: 12px;
+    font-family: 'Source Serif Pro', serif;
+    color: rgba(255, 255, 255, 0.67);
+    text-transform: uppercase;
+    border: 2px solid rgba(23, 128, 123, 0.878);
+    background-color: rgba(25, 134, 134, 0.400);
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2), 0 6px 80px 0 rgba(0,0,0,0.19);
 }
 
 #history-button:hover {
     font-weight: 700;
-    color: #fffee4;
+    color: rgb(255, 254, 228);
+    background-color: rgba(41, 156, 127, 0.588);
+    box-shadow: 0 8px 6px 0 rgba(0,0,0,0.2), 0 12px 80px 0 rgba(0,0,0,0.19)
 }
