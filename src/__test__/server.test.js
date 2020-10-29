@@ -2,7 +2,7 @@ import "@babel/polyfill";
 
 const exportServer = require('../server/server');
 const supertest = require('supertest');
-const request = supertest(exportServer );
+const request = supertest(exportServer);
 
 describe('Get endpoint', () => {
   it('/travel-info', async (done) => {

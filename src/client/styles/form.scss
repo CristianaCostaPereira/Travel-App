@@ -38,8 +38,10 @@ input[type="submit"] {
     color: rgb(226, 222, 222);
     width: 100%;
     text-transform: uppercase;
-    border: 2px solid rgba(23, 128, 123, 0.878);
-    background-color: rgba(37, 150, 121, 0.590);
+    // border: 2px solid rgba(23, 128, 123, 0.878);
+    border: 2px solid rgb(4,61,81);
+    // background-color: rgba(37, 150, 121, 0.590);
+    background-color: rgb(106,176,201);
     padding: 8px;
     border-radius: 6px;
     cursor: pointer;
@@ -49,7 +51,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: rgb(27, 136, 136);
+    // background-color: rgb(27, 136, 136);
+    background-color: rgba(4, 61, 81, 0.41);
     color: rgb(255, 254, 228);
     box-shadow: 0 8px 6px 0 rgba(0,0,0,0.2), 0 12px 80px 0 rgba(0,0,0,0.19)
 }
@@ -72,7 +75,6 @@ input[type="submit"]:hover {
 
 #history-button:hover {
     color: rgb(255, 254, 228);
-    // background-color: rgba(41, 156, 127, 0.588);
     background-color: rgb(138, 148, 148);
     box-shadow: 0 8px 6px 0 rgba(0,0,0,0.2), 0 12px 80px 0 rgba(0,0,0,0.19)
 }

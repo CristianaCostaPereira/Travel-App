@@ -8,7 +8,7 @@ These API's are:<br>
 * **Weatherbit**: weather data;
 * **Pixabay**: image data.
 
-<img src="https://www.bsb-muenchen.de/fileadmin/bsb/sammlungen/karten/998x400_beschreibung_deudtschlandt_bsb00002969_00001.jpg" width=1000>
+<img src="https://www.bsb-muenchen.de/fileadmin/bsb/sammlungen/karten/998x400_beschreibung_deudtschlandt_bsb00002969_00001.jpg" width="1000" height="200">
 
 ## Starting the App
 
