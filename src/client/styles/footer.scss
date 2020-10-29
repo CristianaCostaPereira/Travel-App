@@ -6,22 +6,32 @@ footer {
     margin-top: 20px;
 }
 
-.social-media:hover {
-    font-weight: 700;
+.social-media {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+}
+
+.social-media a i:hover {
+    font-size: 39px;
 }
 
 .fa-facebook-square {
     color: rgb(4,61,81);
+    padding-right: 8px;
 }
 
 .fa-twitter-square {
     color: rgb(4,61,81);
+    padding-right: 8px;
 }
 
 .fa-linkedin {
     color: rgb(4,61,81);
+    padding-right: 8px;
 }
 
 .fa-github-square {
     color: rgb(4,61,81);
+    padding-right: 8px;
 }
