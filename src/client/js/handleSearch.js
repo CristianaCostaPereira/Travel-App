@@ -77,5 +77,5 @@ if (searchEnter) {
     searchEnterVal = searchEnter.value;
 }
 
-export { getTravelInfo }
+export { getTravelInfo, searchEnter }
 
