@@ -42,12 +42,15 @@ An account must be created on all three API's to access the information needed a
 
 #### Environment Variables
 
-Declare the API keys.<br>
+Declare the API keys and three other necessary variables so you can run the code<br>
 Create a `.env file`; should look like:
 ```
 GEO_USERNAME="your-api-username"
 WEATHER_API_KEY="your-api-key"
 PIXABAY_API_KEY="your-api-key"
+MAX_ROWS=1
+IMAGE_TYPE=photo
+TEMPERATURE_SYMBOL=ºC
 ```
 
 ## Set the App
