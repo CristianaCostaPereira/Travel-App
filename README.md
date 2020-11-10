@@ -69,7 +69,7 @@ npm run build
 To run the server:
 
 ```
-npm run start
+npm start
 ```
 
 #### App in the browser
